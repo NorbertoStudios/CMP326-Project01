@@ -3,28 +3,44 @@
 
 package game00;
 
+import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
+import java.io.Console;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.time.Instant;
 import java.io.PrintWriter;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Scanner;
+
 
 public class Game 
 {
 	private Player player;
 	private Room[] dungeon;
 	
+	//Additions
+	PrintWriter outStream = null;
+	private static final String PATH_TO_FILE = "src/game00/file/";
+	
 	public Game()
 	{
-		//player = new Player("Hero", "strong and dependable", 100, 20, 30); // test code this will be a file read from text File
-		
+
 		Scanner x = null;
+		
+		// Accessing the player
 		
 		String name ="", description = "", de = "";
 		int health =0,attack =0,heal =0, thres = 0, index = 0;
 		
 		try
 		{
-			x = new Scanner(new File("Player.txt"));
+			x = new Scanner(new File(PATH_TO_FILE +"Player.txt"));
 			
 				name = x.nextLine();
 				description = x.nextLine();
@@ -49,13 +65,16 @@ public class Game
 		player = new Player(name, description,health,attack,heal);
 		
 		dungeon = new Room[3];
+		
+		// Creating the monster place holders
+		
 		Monster monster1 = null;
 		Monster monster2 = null;
 		Monster monster3 = null;
 		
 		try
 		{
-			x = new Scanner(new File("Monster.txt"));
+			x = new Scanner(new File(PATH_TO_FILE +"Monster.txt"));
 				
 			monster1 = new Monster(name = x.nextLine(), description = x.nextLine(), health = x.nextInt(), attack = x.nextInt(), thres = x.nextInt());
 			x.nextLine();
@@ -77,10 +96,10 @@ public class Game
 				x.close();
 			}
 		}
-		
+		////// Adding it to Room[]
 		try
 		{
-			x = new Scanner(new File("Rooms.txt"));
+			x = new Scanner(new File(PATH_TO_FILE + "Rooms.txt"));
 			
 			index = x.nextInt();
 			x.nextLine();
@@ -115,36 +134,104 @@ public class Game
 			}
 		}
 		
-		//Monster monster1 = new Monster("Orc", "covered with green blood", 20, 5, 0); // test code
-
-	//	Monster monster2 = new Monster("Skeleton", "funny how it moves", 40, 10, 10); // test code
-
-	//	Monster monster3 = new Monster("Fire dragon", "spout fire with each breath", 100, 20, 40); // test code
-		
-		
-		//dungeon[0] = new Room(1, "a room with an unbearable smell", monster1); // test code
-		
-	//	dungeon[1] = new Room(2, "dark and cold", monster2); // test code
-		
-		//dungeon[2] = new TreasureRoom(3, "a giant hall with something shiny on the other end", monster3, "a large pile of gold"); // test code
-		
-		
-		/*
-		Create monster1 with name="Orc", description="covered with green blood", hitPoints=20, damage=5, enrageThreshold=0.
-				Create room1 with monster1 and description="a room with an unbearable smell".
-				Create monster2 with name="Skeleton", description="funny how it moves", hitPoints=40, damage=10, enrageThreshold=10.
-				Create room2 with monster2 and description="dark and cold".
-				Create monster3 with name="Fire dragon", description="spout fire with each breath", hitPoints=100, damage=20, enrangeThreshold=40.
-				Create a TreasureRoom room3 with monster3 and description="a giant hall with something shiny on the other end", and treasure="a large pile of gold".
-				Add room1, room2, and room3 to this.dungeon
-		*/
-		
-		
 	}
 	
 	public void play()
 	{
+		// Creating the file to stored the logs
+	//	createFile();
 		
+        // ++++++++ Game Start +++++++++++
+		gameStarted();
+		
+	}
+	
+	
+	public void fileOutput(String str)
+	{
+		//createFile();
+		outStream.print(str);
+		outStream.flush();
+		
+		if(dungeon[dungeon.length-1].isComplete() || !player.isAlive())
+		{
+			outStream.close();
+		}
+		
+	}
+	
+	public String test()
+	{
+		String str = null;
+		
+		System.out.println("ONE");
+		
+		// Storing the output to consoleStorage
+		ByteArrayOutputStream consoleStorage = new ByteArrayOutputStream();
+		
+		PrintStream newConsole = System.out;
+		
+		System.setOut(new PrintStream(consoleStorage));
+		
+		//Here all system.out.println() calls will be store in consoleStorage
+		System.out.println("TWO");
+		
+		newConsole.println(consoleStorage.toString());
+		
+		System.setOut(newConsole);
+		
+		return str = consoleStorage.toString();
+	}
+	
+	public void appendStrToFile(String str) 
+	{ 
+		// get the calendar and date and time 
+		Calendar cal = Calendar.getInstance();
+        cal.setTime(Date.from(Instant.now()));
+        // format the srting to print date and time in file plus the name
+        String gameLog = String.format(
+                "GameLog-%1$tY-%1$tm-%1$td-%1$tk-%1$tS-%1$tp.txt", cal);
+		
+		try { 
+
+			// Open given file in append mode. 
+			BufferedWriter out = new BufferedWriter( 
+					new FileWriter(PATH_TO_FILE +"Logs/"+ gameLog, true)); 
+			out.write(str); 
+			out.close(); 
+		} 
+		catch (IOException e) { 
+			System.out.println("exception occoured" + e); 
+		} 
+	} 
+	
+	public void createFile()
+	{
+		// get the calendar and date and time 
+				Calendar cal = Calendar.getInstance();
+		        cal.setTime(Date.from(Instant.now()));
+		        // format the srting to print date and time in file plus the name
+		        String gameLog = String.format(
+		                "GameLog-%1$tY-%1$tm-%1$td-%1$tk-%1$tS-%1$tp.txt", cal);
+		        
+				// Create a file game log and wrtie to it
+		        
+				try
+				{
+					outStream = new PrintWriter(PATH_TO_FILE +"Logs/"+ gameLog);
+				
+				}
+				catch(FileNotFoundException e)
+				{
+					System.out.println("Could not create " + e);
+					System.err.println("the messange was " + e.getMessage());
+					//e.printStackTrace();
+				}
+				
+	}
+	
+	public void gameStarted()
+	{
 		dungeon[0].enter(player);
 		for(int i = 0; i < dungeon.length; i++)
 		{
@@ -177,57 +264,10 @@ public class Game
 			}
 			else
 			{
-				System.out.println("Player Dead! "+ player.getName() + "\nIn Room "+ dungeon[i].toString() +"\nGame Over");
+				System.out.println("Player Dead! "+ player.getName() + " Dies young" + "\nIn "+ dungeon[i].toString() +"\nGame Over");
+				break;
 			}
 		}
-		
-		
-		
-
-		/*
-		if(player.isAlive() && dungeon[0].isComplete())
-		{
-			System.out.println("------------------------------------------------");
-			System.out.println("Monster killed - Level Completed");
-			System.out.println("------------------------------------------------");
-			System.out.println("Player Enter next Room");
-			System.out.println("------------------------------------------------");
-			dungeon[1].enter(player);
-			
-		
-			if(player.isAlive() && dungeon[1].isComplete())
-			{
-				System.out.println("------------------------------------------------");
-				System.out.println("Monster killed - Level Completed");
-				System.out.println("------------------------------------------------");
-				System.out.println("Player Enter next Room");
-				System.out.println("------------------------------------------------");
-				dungeon[2].enter(player);
-		
-				if(player.isAlive() && dungeon[2].isComplete())
-				{
-					System.out.println("------------------------------------------------");
-					System.out.println("Monster killed - Level Completed");
-					System.out.println("------------------------------------------------");
-					dungeon[2].enter(player);
-					System.out.println("------------------------------------------------");
-					System.out.println("Congratulations!! \nYou beat the game!!");
-				}
-				else
-				{
-					System.out.println("Player Dead!\nGame Over");
-				}
-			}
-			else 
-			{
-				System.out.println("Player Dead!\nGame Over");
-			}
-		}
-		else 
-		{
-			System.out.println("Player Dead!\nGame Over");
-		}
-		*/
 		
 	}
 	

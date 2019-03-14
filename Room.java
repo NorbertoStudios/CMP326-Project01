@@ -18,8 +18,10 @@ public class Room
 	
 	public void enter(Player player)
 	{
-		System.out.println("Player name: "+ player.getName()
-				+ "\nThis Room is " + this.description + ", \nand has Monster " + this.monster);
+		String str = ("Player name: "+ player.getName()
+		+ "\nThis Room is " + this.description + ", \nand has Monster " + this.monster);
+		System.out.println(str);
+		
 		Battle begins = new Battle(player, monster);
 		begins.run();
 	}

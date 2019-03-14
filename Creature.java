@@ -105,7 +105,7 @@ public class Creature
 	public String toString()
 	{
 		
-		String str = String.format("name %15s, description %20s, hitPoints %03d, damage %02d", 
+		String str = String.format("Name: %10s, \nDescription: %20s, hitPoints: %03d, Damage: %02d", 
 				name, description, hitPoints, damage);
 		return str;
 	}

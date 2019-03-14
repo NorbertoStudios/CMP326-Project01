@@ -12,6 +12,7 @@ public class Battle
 	private Scanner in = new Scanner(System.in);
 	
 	
+	
 	public Battle(Player player, Monster monster)
 	{
 		this.player = player;
@@ -20,48 +21,61 @@ public class Battle
 	
 	public void run()
 	{
-		System.out.println("------------------------------------------------");
+		Game log = new Game();
+		
+		String playerStatus = "Player: "+player.getName()+" = "+player.getHitPoints();
+		String monsterStatus = "Monster: "+monster.getName()+" = "+monster.getHitPoints();
+		String dashes = "------------------------------------------------";
+		String newLine = "\n";
+		
+		System.out.println();
+		System.out.println(dashes);
+		
+		//log.fileOutput(dashes);
+		log.appendStrToFile(dashes+newLine);
+		
 		System.out.println("Battle begins: " + player.getName() + " vs " + monster.getName());
+		
+		//log.fileOutput("Battle begins: " + player.getName() + " vs " + monster.getName());
+		//log.fileOutput(dashes);
 		
 		while(player.isAlive())
 		{
 			// Players turn
-			System.out.println("------------------------------------------------");
+			System.out.println();
+			System.out.println(dashes);
 			
 		System.out.println("Player turn: " + player.getName() +" has " +player.getHitPoints() +" hitPoints" 
 		+ " and " + monster.getName() + " has "+ monster.getHitPoints() +" hitPoints");
 		
-		System.out.println("------------------------------------------------");
+		System.out.println(dashes);
 		
 			System.out.println("Do you want to Attack or Heal? Press A to attack or H for heal");
 			
 			String a = in.next();
 			if(a.equals("a") || a.equals("A"))
 			{
-				System.out.println("------------------------------------------------");
+				System.out.println(dashes);
 				player.attack(monster);
 				if(monster.isAlive() )
 				{
-					System.out.println("Monster "+monster.getHitPoints());
-					System.out.println("Player "+player.getHitPoints());
-					System.out.println("------------------------------------------------");
+					System.out.println(monsterStatus +"\n"+ playerStatus);
+					System.out.println(dashes);
 					System.out.println("Monster turn: " + monster.getName() +" has " +monster.getHitPoints() 
 					+ " and " + player.getName() + " has "+ player.getHitPoints() +" hitPoints");
-					System.out.println("------------------------------------------------");
+					System.out.println(dashes);
 					
 					if(monster.canEnrage())
 					{
 						monster.enrage();
 						monster.attack(player);
-						System.out.println("Monster "+monster.getHitPoints());
-						System.out.println("Player "+player.getHitPoints());
+						System.out.println(monsterStatus +"\n"+ playerStatus);
 						
 					}
 					else
 					{
 						monster.attack(player);
-						System.out.println("Monster "+monster.getHitPoints());
-						System.out.println("Player "+player.getHitPoints());
+						System.out.println(monsterStatus +"\n"+ playerStatus);
 						
 					}
 					
@@ -74,28 +88,24 @@ public class Battle
 			}
 			else if(a.equals("h") || a.equals("H"))
 			{
-				System.out.println("------------------------------------------------");
+				System.out.println(dashes);
 				player.heal();
-				System.out.println("Monster "+monster.getHitPoints());
-				System.out.println("Player "+player.getHitPoints());
+				System.out.println(monsterStatus +"\n"+ playerStatus);
 				if(monster.isAlive() )
 				{
-					System.out.println("------------------------------------------------");
+					System.out.println(dashes);
 					System.out.println("Monster turn: " + monster.getName() +" has " +monster.getHitPoints() 
 					+ " and " + player.getName() + " has "+ player.getHitPoints() +" hitPoints");
-					System.out.println("------------------------------------------------");
+					System.out.println(dashes);
 					if(monster.canEnrage())
 					{
 						monster.attack(player);
-						System.out.println("Monster "+monster.getHitPoints());
-						System.out.println("Player "+player.getHitPoints());
-						
+						System.out.println(monsterStatus +"\n"+ playerStatus);
 					}
 					else
 					{
 						monster.attack(player);
-					System.out.println("Monster "+monster.getHitPoints());
-					System.out.println("Player "+player.getHitPoints());
+						System.out.println(monsterStatus +"\n"+ playerStatus);
 						
 					}
 					

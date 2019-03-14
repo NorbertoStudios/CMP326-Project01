@@ -1,0 +1,17 @@
+Orc
+covered with green blood
+20
+5
+0
+
+Skeleton
+funny how it moves
+40
+10
+10
+
+Fire dragon
+spout fire with each breath
+100
+20
+40
