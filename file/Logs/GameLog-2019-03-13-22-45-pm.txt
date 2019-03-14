@@ -1,0 +1,476 @@
+Player name: Norberto
+This Room is a room with an unbearable smell, 
+and has Monster Name:        Orc, 
+Description: covered with green blood, hitPoints: 020, Damage: 05
+------------------------------------------------
+Battle begins: Norberto vs Orc
+------------------------------------------------
+Player turn: Norberto has 1000 hitPoints and Orc has 20 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Orc, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Orc = 15 hitPoints
+Player: Norberto = 1000 hitPoints
+------------------------------------------------
+Monster turn: Orc has 15 and Norberto has 1000 hitPoints
+------------------------------------------------
+Orc attacks target Norberto, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 995 hitPoints and Orc has 15 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Orc, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Orc = 10 hitPoints
+Player: Norberto = 995 hitPoints
+------------------------------------------------
+Monster turn: Orc has 10 and Norberto has 995 hitPoints
+------------------------------------------------
+Orc attacks target Norberto, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 990 hitPoints and Orc has 10 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Orc, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Orc = 5 hitPoints
+Player: Norberto = 990 hitPoints
+------------------------------------------------
+Monster turn: Orc has 5 and Norberto has 990 hitPoints
+------------------------------------------------
+Orc attacks target Norberto, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 985 hitPoints and Orc has 5 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Orc, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster killed - Level Completed
+------------------------------------------------
+Player Enter next Room
+------------------------------------------------
+Player name: Norberto
+This Room is dark and cold, 
+and has Monster Name:   Skeleton, 
+Description:   funny how it moves, hitPoints: 040, Damage: 10
+------------------------------------------------
+Battle begins: Norberto vs Skeleton
+------------------------------------------------
+Player turn: Norberto has 985 hitPoints and Skeleton has 40 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Skeleton, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Skeleton = 35 hitPoints
+Player: Norberto = 985 hitPoints
+------------------------------------------------
+Monster turn: Skeleton has 35 and Norberto has 985 hitPoints
+------------------------------------------------
+Skeleton attacks target Norberto, dealing damage 10
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 975 hitPoints and Skeleton has 35 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Skeleton, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Skeleton = 30 hitPoints
+Player: Norberto = 975 hitPoints
+------------------------------------------------
+Monster turn: Skeleton has 30 and Norberto has 975 hitPoints
+------------------------------------------------
+Skeleton attacks target Norberto, dealing damage 10
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 965 hitPoints and Skeleton has 30 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Skeleton, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Skeleton = 25 hitPoints
+Player: Norberto = 965 hitPoints
+------------------------------------------------
+Monster turn: Skeleton has 25 and Norberto has 965 hitPoints
+------------------------------------------------
+Skeleton attacks target Norberto, dealing damage 10
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 955 hitPoints and Skeleton has 25 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto is healed by 30
+------------------------------------------------
+Monster: Skeleton = 25 hitPoints
+Player: Norberto = 985 hitPoints
+------------------------------------------------
+Monster turn: Skeleton has 25 and Norberto has 985 hitPoints
+------------------------------------------------
+Skeleton attacks target Norberto, dealing damage 10
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 975 hitPoints and Skeleton has 25 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Skeleton, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Skeleton = 20 hitPoints
+Player: Norberto = 975 hitPoints
+------------------------------------------------
+Monster turn: Skeleton has 20 and Norberto has 975 hitPoints
+------------------------------------------------
+Skeleton attacks target Norberto, dealing damage 10
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 965 hitPoints and Skeleton has 20 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Skeleton, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Skeleton = 15 hitPoints
+Player: Norberto = 965 hitPoints
+------------------------------------------------
+Monster turn: Skeleton has 15 and Norberto has 965 hitPoints
+------------------------------------------------
+Skeleton attacks target Norberto, dealing damage 10
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 955 hitPoints and Skeleton has 15 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Skeleton, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Skeleton = 10 hitPoints
+Player: Norberto = 955 hitPoints
+------------------------------------------------
+Monster turn: Skeleton has 10 and Norberto has 955 hitPoints
+------------------------------------------------
+Skeleton attacks target Norberto, dealing damage 10
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 945 hitPoints and Skeleton has 10 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Skeleton, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Skeleton = 5 hitPoints
+Player: Norberto = 945 hitPoints
+------------------------------------------------
+Monster turn: Skeleton has 5 and Norberto has 945 hitPoints
+------------------------------------------------
+The Monster is enrage!! his attacks are now double
+Skeleton attacks target Norberto, dealing damage 20
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 925 hitPoints and Skeleton has 5 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Skeleton, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster killed - Level Completed
+------------------------------------------------
+Player Enter next Room
+------------------------------------------------
+Player name: Norberto
+This Room is a giant hall with something shiny on the other end, 
+and has Monster Name: Fire dragon, 
+Description: spout fire with each breath, hitPoints: 100, Damage: 20
+------------------------------------------------
+Battle begins: Norberto vs Fire dragon
+------------------------------------------------
+Player turn: Norberto has 925 hitPoints and Fire dragon has 100 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 95 hitPoints
+Player: Norberto = 925 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 95 and Norberto has 925 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 20
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 905 hitPoints and Fire dragon has 95 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 90 hitPoints
+Player: Norberto = 905 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 90 and Norberto has 905 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 20
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 885 hitPoints and Fire dragon has 90 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 85 hitPoints
+Player: Norberto = 885 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 85 and Norberto has 885 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 20
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 865 hitPoints and Fire dragon has 85 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 80 hitPoints
+Player: Norberto = 865 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 80 and Norberto has 865 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 20
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 845 hitPoints and Fire dragon has 80 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 75 hitPoints
+Player: Norberto = 845 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 75 and Norberto has 845 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 20
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 825 hitPoints and Fire dragon has 75 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 70 hitPoints
+Player: Norberto = 825 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 70 and Norberto has 825 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 20
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 805 hitPoints and Fire dragon has 70 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 65 hitPoints
+Player: Norberto = 805 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 65 and Norberto has 805 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 20
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 785 hitPoints and Fire dragon has 65 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 60 hitPoints
+Player: Norberto = 785 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 60 and Norberto has 785 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 20
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 765 hitPoints and Fire dragon has 60 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 55 hitPoints
+Player: Norberto = 765 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 55 and Norberto has 765 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 20
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 745 hitPoints and Fire dragon has 55 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 50 hitPoints
+Player: Norberto = 745 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 50 and Norberto has 745 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 20
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 725 hitPoints and Fire dragon has 50 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 45 hitPoints
+Player: Norberto = 725 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 45 and Norberto has 725 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 20
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 705 hitPoints and Fire dragon has 45 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 40 hitPoints
+Player: Norberto = 705 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 40 and Norberto has 705 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 20
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 685 hitPoints and Fire dragon has 40 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 35 hitPoints
+Player: Norberto = 685 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 35 and Norberto has 685 hitPoints
+------------------------------------------------
+The Monster is enrage!! his attacks are now double
+Fire dragon attacks target Norberto, dealing damage 40
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 645 hitPoints and Fire dragon has 35 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 30 hitPoints
+Player: Norberto = 645 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 30 and Norberto has 645 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 40
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 605 hitPoints and Fire dragon has 30 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 25 hitPoints
+Player: Norberto = 605 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 25 and Norberto has 605 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 40
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 565 hitPoints and Fire dragon has 25 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 20 hitPoints
+Player: Norberto = 565 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 20 and Norberto has 565 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 40
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 525 hitPoints and Fire dragon has 20 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 15 hitPoints
+Player: Norberto = 525 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 15 and Norberto has 525 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 40
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 485 hitPoints and Fire dragon has 15 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 10 hitPoints
+Player: Norberto = 485 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 10 and Norberto has 485 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 40
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 445 hitPoints and Fire dragon has 10 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Fire dragon = 5 hitPoints
+Player: Norberto = 445 hitPoints
+------------------------------------------------
+Monster turn: Fire dragon has 5 and Norberto has 445 hitPoints
+------------------------------------------------
+Fire dragon attacks target Norberto, dealing damage 40
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 405 hitPoints and Fire dragon has 5 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Fire dragon, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster killed - Level Completed
+------------------------------------------------
+You explored the room and found the hidden treasure! 
+A large pile of gold
+------------------------------------------------
+Congratulations!! 
+You beat the game!!
+END OF LOG!!

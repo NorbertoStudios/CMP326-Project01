@@ -23,8 +23,6 @@ public class Battle
 	{
 		Game log = new Game();
 		
-		String playerStatus = "Player: "+player.getName()+" = "+player.getHitPoints();
-		String monsterStatus = "Monster: "+monster.getName()+" = "+monster.getHitPoints();
 		String dashes = "------------------------------------------------";
 		String newLine = "\n";
 		
@@ -36,7 +34,7 @@ public class Battle
 		
 		System.out.println("Battle begins: " + player.getName() + " vs " + monster.getName());
 		
-		//log.fileOutput("Battle begins: " + player.getName() + " vs " + monster.getName());
+		log.appendStrToFile("Battle begins: " + player.getName() + " vs " + monster.getName()+newLine);
 		//log.fileOutput(dashes);
 		
 		while(player.isAlive())
@@ -44,38 +42,57 @@ public class Battle
 			// Players turn
 			System.out.println();
 			System.out.println(dashes);
+			log.appendStrToFile(dashes+newLine);
 			
 		System.out.println("Player turn: " + player.getName() +" has " +player.getHitPoints() +" hitPoints" 
 		+ " and " + monster.getName() + " has "+ monster.getHitPoints() +" hitPoints");
 		
+		log.appendStrToFile("Player turn: " + player.getName() +" has " +player.getHitPoints() +" hitPoints" 
+		+ " and " + monster.getName() + " has "+ monster.getHitPoints() +" hitPoints"+newLine);
+		
 		System.out.println(dashes);
+		log.appendStrToFile(dashes+newLine);
 		
 			System.out.println("Do you want to Attack or Heal? Press A to attack or H for heal");
+			log.appendStrToFile("Do you want to Attack or Heal? Press A to attack or H for heal" + newLine);
 			
 			String a = in.next();
+			
 			if(a.equals("a") || a.equals("A"))
 			{
 				System.out.println(dashes);
 				player.attack(monster);
+				
 				if(monster.isAlive() )
 				{
-					System.out.println(monsterStatus +"\n"+ playerStatus);
+					System.out.println("Monster: "+monster.getName()+" = "+monster.getHitPoints()+" hitPoints" 
+											+"\n"+ "Player: "+player.getName()+" = "+player.getHitPoints()+" hitPoints");
+					log.appendStrToFile(dashes+newLine+"Monster: "+monster.getName()+" = "+monster.getHitPoints()+" hitPoints" 
+											+"\n"+ "Player: "+player.getName()+" = "+player.getHitPoints()+" hitPoints"+newLine);
 					System.out.println(dashes);
 					System.out.println("Monster turn: " + monster.getName() +" has " +monster.getHitPoints() 
-					+ " and " + player.getName() + " has "+ player.getHitPoints() +" hitPoints");
+											+ " and " + player.getName() + " has "+ player.getHitPoints() +" hitPoints");
 					System.out.println(dashes);
+					log.appendStrToFile(dashes+newLine+"Monster turn: " + monster.getName() +" has " +monster.getHitPoints() 
+					+ " and " + player.getName() + " has "+ player.getHitPoints() +" hitPoints"+newLine+dashes+newLine);
 					
+					// if is true run it but if its already true skip
 					if(monster.canEnrage())
 					{
-						monster.enrage();
-						monster.attack(player);
-						System.out.println(monsterStatus +"\n"+ playerStatus);
+						
+							monster.enrage();
+							
+							monster.attack(player);
+							System.out.println("Monster: "+monster.getName()+" = "+monster.getHitPoints()+" hitPoints" 
+												+"\n"+ "Player: "+player.getName()+" = "+player.getHitPoints()+" hitPoints");
+						
 						
 					}
 					else
 					{
 						monster.attack(player);
-						System.out.println(monsterStatus +"\n"+ playerStatus);
+						System.out.println("Monster: "+monster.getName()+" = "+monster.getHitPoints()+" hitPoints" 
+											+"\n"+ "Player: "+player.getName()+" = "+player.getHitPoints()+" hitPoints");
 						
 					}
 					
@@ -90,22 +107,30 @@ public class Battle
 			{
 				System.out.println(dashes);
 				player.heal();
-				System.out.println(monsterStatus +"\n"+ playerStatus);
+				System.out.println("Monster: "+monster.getName()+" = "+monster.getHitPoints()+" hitPoints" 
+										+"\n"+ "Player: "+player.getName()+" = "+player.getHitPoints()+" hitPoints");
+				log.appendStrToFile(dashes+newLine+"Monster: "+monster.getName()+" = "+monster.getHitPoints()+" hitPoints" 
+						+"\n"+ "Player: "+player.getName()+" = "+player.getHitPoints()+" hitPoints"+newLine);
 				if(monster.isAlive() )
 				{
 					System.out.println(dashes);
 					System.out.println("Monster turn: " + monster.getName() +" has " +monster.getHitPoints() 
-					+ " and " + player.getName() + " has "+ player.getHitPoints() +" hitPoints");
+											+ " and " + player.getName() + " has "+ player.getHitPoints() +" hitPoints");
+					log.appendStrToFile(dashes+newLine+"Monster turn: " + monster.getName() +" has " +monster.getHitPoints() 
+					+ " and " + player.getName() + " has "+ player.getHitPoints() +" hitPoints"+newLine+dashes+newLine);
 					System.out.println(dashes);
 					if(monster.canEnrage())
 					{
 						monster.attack(player);
-						System.out.println(monsterStatus +"\n"+ playerStatus);
+						System.out.println("Monster: "+monster.getName()+" = "+monster.getHitPoints()+" hitPoints" 
+											+"\n"+ "Player: "+player.getName()+" = "+player.getHitPoints()+" hitPoints");
 					}
 					else
 					{
 						monster.attack(player);
-						System.out.println(monsterStatus +"\n"+ playerStatus);
+						System.out.println("Monster: "+monster.getName()+" = "+monster.getHitPoints()+" hitPoints" 
+											+"\n"+ "Player: "+player.getName()+" = "+player.getHitPoints()+" hitPoints");
+						
 						
 					}
 					
@@ -119,6 +144,7 @@ public class Battle
 			else
 			{
 				System.err.println("Wrong character, Please try again");
+				log.appendStrToFile("\nWARNING\n!!!!!!Wrong character, Please try again!!!!!"+newLine);
 			}
 			
 		}

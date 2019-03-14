@@ -18,9 +18,11 @@ public class Room
 	
 	public void enter(Player player)
 	{
+		Game log = new Game();
 		String str = ("Player name: "+ player.getName()
 		+ "\nThis Room is " + this.description + ", \nand has Monster " + this.monster);
 		System.out.println(str);
+		log.appendStrToFile(str+"\n");
 		
 		Battle begins = new Battle(player, monster);
 		begins.run();

@@ -4,14 +4,10 @@
 package game00;
 
 import java.io.BufferedWriter;
-import java.io.ByteArrayOutputStream;
-import java.io.Console;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.time.Instant;
 import java.io.PrintWriter;
 import java.util.Calendar;
@@ -35,7 +31,7 @@ public class Game
 		
 		// Accessing the player
 		
-		String name ="", description = "", de = "";
+		String name ="", description = ""; //de = "";
 		int health =0,attack =0,heal =0, thres = 0, index = 0;
 		
 		try
@@ -44,7 +40,7 @@ public class Game
 			
 				name = x.nextLine();
 				description = x.nextLine();
-		
+				
 				health = x.nextInt();
 				attack = x.nextInt();
 				heal = x.nextInt();
@@ -146,7 +142,7 @@ public class Game
 		
 	}
 	
-	
+	/*
 	public void fileOutput(String str)
 	{
 		//createFile();
@@ -159,6 +155,8 @@ public class Game
 		}
 		
 	}
+	*/
+	/*	
 	
 	public String test()
 	{
@@ -182,7 +180,7 @@ public class Game
 		
 		return str = consoleStorage.toString();
 	}
-	
+*/	
 	public void appendStrToFile(String str) 
 	{ 
 		// get the calendar and date and time 
@@ -190,7 +188,7 @@ public class Game
         cal.setTime(Date.from(Instant.now()));
         // format the srting to print date and time in file plus the name
         String gameLog = String.format(
-                "GameLog-%1$tY-%1$tm-%1$td-%1$tk-%1$tS-%1$tp.txt", cal);
+                "GameLog-%1$tY-%1$tm-%1$td-%1$tk-%1$tM-%1$tp.txt", cal);
 		
 		try { 
 
@@ -202,9 +200,10 @@ public class Game
 		} 
 		catch (IOException e) { 
 			System.out.println("exception occoured" + e); 
+			this.appendStrToFile("exception occoured" + e+"\n");
 		} 
 	} 
-	
+	/*/
 	public void createFile()
 	{
 		// get the calendar and date and time 
@@ -229,42 +228,45 @@ public class Game
 				}
 				
 	}
-	
+	*/
 	public void gameStarted()
 	{
+		String levelCompleted = "------------------------------------------------"
+				+ "\nMonster killed - Level Completed"
+				+ "\n------------------------------------------------";
+		String nextRoom = "Player Enter next Room"
+				+"\n------------------------------------------------";
+		String endOfGame = "------------------------------------------------"
+				+ "\nCongratulations!! \nYou beat the game!!";
+		
+		
 		dungeon[0].enter(player);
 		for(int i = 0; i < dungeon.length; i++)
 		{
 			if(player.isAlive() && dungeon[i].isComplete())
 			{
-				
 				if(i == dungeon.length - 1)
 				{
-					System.out.println("------------------------------------------------");
-					System.out.println("Monster killed - Level Completed");
-					System.out.println("------------------------------------------------");
-					
+					System.out.println(levelCompleted);
+					this.appendStrToFile(levelCompleted+"\n");
 					dungeon[dungeon.length-1].enter(player);
-					
-					System.out.println("------------------------------------------------");
-					System.out.println("Congratulations!! \nYou beat the game!!");
-					
+					System.out.println(endOfGame);
+					this.appendStrToFile(endOfGame+"\nEND OF LOG!!");
 				}
 				else
 				{
 					System.out.println("************************************************");
-					System.out.println("------------------------------------------------");
-					System.out.println("Monster killed - Level Completed");
-					System.out.println("------------------------------------------------");
-					System.out.println("Player Enter next Room");
-					System.out.println("------------------------------------------------");
+					System.out.println(levelCompleted);
 					
+					System.out.println(nextRoom);
+					this.appendStrToFile(levelCompleted+"\n"+nextRoom+"\n");
 					dungeon[i + 1].enter(player);
 				}
 			}
 			else
 			{
-				System.out.println("Player Dead! "+ player.getName() + " Dies young" + "\nIn "+ dungeon[i].toString() +"\nGame Over");
+				System.out.println("Player Dead! "+ player.getName() + " Dies young" + "\nIn "+ dungeon[i].toString() +"\nGAME OVER");
+				this.appendStrToFile("Player Dead! "+ player.getName() + " Dies young" + "\nIn "+ dungeon[i].toString() +"\nGAME OVER\nEND OF LOG!!");
 				break;
 			}
 		}

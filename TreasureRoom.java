@@ -22,8 +22,10 @@ public class TreasureRoom extends Room
 		}
 		else if(super.isComplete())
 		{
+			Game log = new Game();
 			// this should only be displayed if the monster is kill
 			System.out.println("You explored the room and found the hidden treasure! \n" + treasure); 
+			log.appendStrToFile("You explored the room and found the hidden treasure! \n" + treasure +"\n");
 		}
 		
 	}

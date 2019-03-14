@@ -71,9 +71,16 @@ public class Creature
 	
 	public void attack(Creature creature)
 	{
+		Game log = new Game();
 		
-		System.out.println(this.name + " attacks target "+creature.name +", dealing damage " + this.damage);
 		creature.takeDamage(damage);
+		
+		
+		System.out.println(this.name + " attacks target "+creature.name +", dealing damage " + this.damage
+				+"\n------------------------------------------------");
+		log.appendStrToFile(this.name + " attacks target "+creature.name +", dealing damage " + this.damage 
+				+"\n------------------------------------------\n");
+		
 	}
 	
 	public boolean isAlive()     // is true only when the creature has positive hitPoints (Meaning Health)

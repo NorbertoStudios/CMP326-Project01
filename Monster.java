@@ -7,6 +7,7 @@ public class Monster extends Creature
 {
 	
 	private boolean isEnraged;
+	
 	private int enrageThreshold;
 	
 	public Monster(String name, String description, int hitPoint, int damage, int enrageThreshold) {
@@ -22,14 +23,21 @@ public class Monster extends Creature
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
 	public void enrage()  // this method will double the damage
 	{
+		Game log = new Game();
+		if(!this.isEnraged)
+		{
+			this.isEnraged = !this.isEnraged;
+			
 			System.out.println("The Monster is enrage!! his attacks are now double");
+			log.appendStrToFile("The Monster is enrage!! his attacks are now double\n");
 			this.setDamage(getDamage()* 2);
-		
+		}
 	}
 	
 

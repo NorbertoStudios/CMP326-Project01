@@ -1,0 +1,38 @@
+Player name: Norberto
+This Room is a room with an unbearable smell, 
+and has Monster Name:        Orc, 
+Description: covered with green blood, hitPoints: 020, Damage: 05
+------------------------------------------------
+Battle begins: Norberto vs Orc
+------------------------------------------------
+Player turn: Norberto has 10 hitPoints and Orc has 20 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Orc, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Orc = 15 hitPoints
+Player: Norberto = 10 hitPoints
+------------------------------------------------
+Monster turn: Orc has 15 and Norberto has 10 hitPoints
+------------------------------------------------
+Orc attacks target Norberto, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Player turn: Norberto has 5 hitPoints and Orc has 15 hitPoints
+------------------------------------------------
+Do you want to Attack or Heal? Press A to attack or H for heal
+Norberto attacks target Orc, dealing damage 5
+------------------------------------------
+------------------------------------------------
+Monster: Orc = 10 hitPoints
+Player: Norberto = 5 hitPoints
+------------------------------------------------
+Monster turn: Orc has 10 and Norberto has 5 hitPoints
+------------------------------------------------
+Orc attacks target Norberto, dealing damage 5
+------------------------------------------
+Player Dead! Norberto Dies young
+In Room index  1, decription a room with an unbearable smell, monster name                  Orc
+GAME OVER
+END OF LOG!!

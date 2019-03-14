@@ -15,7 +15,9 @@ public class Player extends Creature
 	
 	public void heal()  // this method increase hitPoints
 	{
+		Game log = new Game();
 		System.out.println(this.getName() + " is healed by " + healAmount);
+		log.appendStrToFile(this.getName() + " is healed by " + healAmount+"\n");
 		this.setHitPoints(getHitPoints() + healAmount); 
 	}
 
