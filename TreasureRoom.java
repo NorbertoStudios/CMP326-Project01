@@ -18,7 +18,7 @@ public class TreasureRoom extends Room
 	{
 		if(!super.isComplete())
 		{
-		super.enter(player);
+			super.enter(player);
 		}
 		else if(super.isComplete())
 		{

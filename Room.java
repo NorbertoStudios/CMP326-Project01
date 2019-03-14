@@ -22,20 +22,12 @@ public class Room
 				+ "\nThis Room is " + this.description + ", \nand has Monster " + this.monster);
 		Battle begins = new Battle(player, monster);
 		begins.run();
-		isComplete();
 	}
 	
 	public boolean isComplete()   // return true if monster is dead
 	{
 		if(!monster.isAlive())
 		{
-			System.out.println("Monster killed - Level Completed");
-			System.out.println("------------------------------------------------");
-			if(roomIndex < 3)
-			{
-				System.out.println("Player Enter next Room");
-				System.out.println("------------------------------------------------");
-			}
 			return true;
 		}
 		return false;

@@ -20,7 +20,6 @@ public class Monster extends Creature
 	{
 		if(this.getHitPoints() < enrageThreshold)
 		{
-	
 			return true;
 		}
 		return false;
@@ -28,7 +27,6 @@ public class Monster extends Creature
 	
 	public void enrage()  // this method will double the damage
 	{
-		
 			System.out.println("The Monster is enrage!! his attacks are now double");
 			this.setDamage(getDamage()* 2);
 		
